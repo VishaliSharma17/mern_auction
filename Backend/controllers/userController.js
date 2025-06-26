@@ -102,7 +102,11 @@ export const register = catchAsyncErrors(async (req, res, next) => {
 
 
 export const login=catchAsyncErrors(async(req,res,next)=>{
+
   const {email,password}=req.body;
+
+  console.log("----------------------------------------------------------");
+ 
   if(!email||!password){
     return next(new ErrorHandler("Please fill full form.."));
   }
